@@ -32,6 +32,7 @@ body {
   overflow-x: auto; /* تمكين التمرير إذا تجاوز النص الحجم */
   white-space: nowrap; /* منع النص من الانقسام */
   border-bottom: 2px solid #ccc; /* تحسين الشكل بحد سفلي */
+  direction: ltr; /* لضمان كتابة الأرقام بشكل صحيح */
 }
 
 /* تصميم الأزرار */
