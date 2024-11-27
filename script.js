@@ -1,10 +1,10 @@
-// تحديث الشاشة
+// تحديث الشاشة بإضافة القيمة
 function appendValue(value) {
   const display = document.getElementById('display');
   display.value += value;
 }
 
-// مسح الشاشة
+// مسح الشاشة بالكامل
 function clearDisplay() {
   const display = document.getElementById('display');
   display.value = '';
@@ -20,8 +20,9 @@ function deleteLast() {
 function calculate() {
   const display = document.getElementById('display');
   try {
-    display.value = eval(display.value.replace('×', '*').replace('÷', '/'));
-  } catch {
-    display.value = 'خطأ';
+    // استبدال الرموز × و ÷
+    display.value = eval(display.value.replace(/×/g, '*').replace(/÷/g, '/'));
+  } catch (error) {
+    display.value = 'خطأ'; // في حالة وجود خطأ
   }
 }
